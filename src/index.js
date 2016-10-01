@@ -3,13 +3,16 @@ import { render } from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router';
 
 import Navbar from './components/Navbar';
-import BeerBoard from './components/BeerBoard';
-// import ViewDetail from './components/ViewDetail';
+import TopRepoBoard from './components/TopRepoBoard';
+import TopUserBoard from './components/TopUserBoard';
+import CHBoard from './components/CHBoard';
 
 render(
   <Router history = {browserHistory}>
     <Route path = '/' component = {Navbar}>
-      <Route path = 'beers' component = {BeerBoard} />
+      <Route path = 'topRepo' component = {TopRepoBoard} />
+      <Route path = 'topUser' component = {TopUserBoard} />
+      <Route path = 'ch' component = {CHBoard} />
     </Route>
   </Router>,
   document.getElementById('root')

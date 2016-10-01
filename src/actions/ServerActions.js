@@ -1,18 +1,24 @@
 import AppDispatcher from '../AppDispatcher';
 
 const ServerActions = {
-  receiveRandomBeer(beers) {
+  receiveRepos(topRepos) {
     AppDispatcher.dispatch({
-      type: 'RECEIVE_RANDOM_BEER',
-      payload: { beers }
+      type: 'RECEIVE_REPOS',
+      payload: { topRepos }
     })
   },
-  // receiveStock(stock) {
-  //   AppDispatcher.dispatch({
-  //     type: 'RECEIVE_STOCK',
-  //     payload: { stock }
-  //   })
-  // }
+  receiveUsers(topUsers) {
+    AppDispatcher.dispatch({
+      type: 'RECEIVE_USERS',
+      payload: { topUsers }
+    })
+  },
+  receiveCH(chs) {
+    AppDispatcher.dispatch({
+      type: 'RECEIVE_CH',
+      payload: { chs }
+    })
+  }
 }
 
 export default ServerActions;
