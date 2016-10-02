@@ -17,5 +17,3 @@ render(
   </Router>,
   document.getElementById('root')
 )
-
-{/* <Route path = 'view' component = {ViewDetail}/> */}
