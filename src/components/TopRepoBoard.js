@@ -31,15 +31,15 @@ export default class TopRepoBoard extends Component {
         let {clone_url, owner, name, id, html_url, stargazers_count} = topRepo;
         let {avatar_url} = owner;
         return (
-         <div className="col-md-3">
-          <div className='gitRepItem' key={id}>
+         <div className="col-md-3" key={id}>
+          <div className='gitRepItem'>
             <img src={avatar_url} className="gitRepImg" />
             <p className="gitRepName">{name}</p>
             <a className="gitRepProfile" href={html_url}>Html Link</a>
             <a className="gitRepClone" href={clone_url}>Clone Me</a>
             <p className="gitRepGazers">{stargazers_count}<br /><span className='smallStar'>stars</span></p>
           </div>
-        </div> 
+        </div>
         )
       })
     }else{

@@ -56,6 +56,3 @@ export default class Navbar extends Component {
     )
   }
 };
-
-
-// onChange={(e) => this.setState({name: e.target.value})}

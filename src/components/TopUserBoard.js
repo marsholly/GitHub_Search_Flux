@@ -30,8 +30,8 @@ export default class TopUserBoard extends Component {
       usersList = topUsers.map(topUser => {
         let {login, avatar_url, id, html_url, repos_url } = topUser;
         return (
-        <div className="col-md-3">
-          <div className='gitRepItem' key={id}>
+        <div className="col-md-3" key={id}>
+          <div className='gitRepItem'>
             <img src={avatar_url} className="gitRepImg" />
             <p className="gitRepName">{login}</p>
             <a className="gitRepClone" href={html_url}>Profile</a>

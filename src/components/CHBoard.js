@@ -29,11 +29,10 @@ export default class CHBoard extends Component {
     if ( chs ) {
       chsList = chs.map(ch => {
         let {name, avatar_url, id, html_url, repos_url, hireable} = ch;
-        /*if(hireable == null) hireable ='UPDATE HIREABLE';*/
         if(name == null) name ='UPDATE NAME';
         return (
-        <div className="col-xs-4">
-          <div className='gitItem ' key={id}>
+        <div className="col-xs-4" key={id}>
+          <div className='gitItem' >
             <img src={avatar_url} className="gitImg" />
             <p className="gitName">{name}</p>
             <a className="gitProfile" href={html_url}>Visit Profile</a>

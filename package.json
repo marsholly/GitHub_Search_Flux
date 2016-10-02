@@ -23,6 +23,7 @@
     "imports-loader": "^0.6.5",
     "jquery": "^3.1.1",
     "jsonp": "^0.2.0",
+    "lodash": "^4.16.2",
     "material-ui": "^0.15.4",
     "moment": "^2.15.1",
     "node-sass": "^3.10.0",
