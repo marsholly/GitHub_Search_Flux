@@ -41,13 +41,13 @@ export default class Navbar extends Component {
           <input type="text" className="form-control gitInputForm" placeholder="Enter a language or library to Get Started" ref='langlib'/>
          </div>
           <div className="col-xs-4">
-            <Link to='topRepo' className="git-btn" onClick={this.searchByLanguage}>Find Top Repos</Link>
+            <Link to='GitHub_Search_Flux/topRepo' className="git-btn" onClick={this.searchByLanguage}>Find Top Repos</Link>
           </div>
           <div className="col-xs-4">
-            <Link to='topUser' className="git-btn" onClick={this.searchByUser}>Find Top Developers</Link>
+            <Link to='GitHub_Search_Flux/topUser' className="git-btn" onClick={this.searchByUser}>Find Top Developers</Link>
           </div>
           <div className="col-xs-4">
-            <Link to='ch' className="git-btn" onClick={this.CodingHouseSearch} >Coding House Profiles</Link>
+            <Link to='GitHub_Search_Flux/ch' className="git-btn" onClick={this.CodingHouseSearch} >Coding House Profiles</Link>
           </div>
 
         </div>

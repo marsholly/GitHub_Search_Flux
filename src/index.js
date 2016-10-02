@@ -9,7 +9,7 @@ import CHBoard from './components/CHBoard';
 
 render(
   <Router history = {browserHistory}>
-    <Route path = '/' component = {Navbar}>
+    <Route path = '/GitHub_Search_Flux/' component = {Navbar}>
       <Route path = 'topRepo' component = {TopRepoBoard} />
       <Route path = 'topUser' component = {TopUserBoard} />
       <Route path = 'ch' component = {CHBoard} />
