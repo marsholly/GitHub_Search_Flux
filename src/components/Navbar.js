@@ -22,11 +22,14 @@ export default class Navbar extends Component {
   }
 
   CodingHouseSearch() {
-    let nameArr = ['AJFunk','cadenichols','jovjohnson', 'WindUpDurb','TobiahRex','joshuaMaddox','marsholly','Zhaggy','Nemsae','migsadventure', 'mavarius','thejapanexperience','necancsh','ziyaemanet','sammicodekat','donbobvanbirt']
-    GitHubActions.searchCH(nameArr);
+    let nameArr = ['AJFunk','cadenichols','jovjohnson', 'WindUpDurb','TobiahRex','joshuaMaddox','marsholly','Zhaggy','Nemsae','migsadventure', 'mavarius','thejapanexperience','necancsh','ziyaemanet','sammicodekat','donbobvanbirt','johnsalay','wowcallmia'];
+    let len = nameArr.length;
+    let nameObj = {
+      nameArr,
+      len
+    }
+    GitHubActions.searchCH(nameObj);
   }
-
-  // delete to here
 
   render() {
     return (
@@ -44,7 +47,7 @@ export default class Navbar extends Component {
             <Link to='topUser' className="git-btn" onClick={this.searchByUser}>Find Top Developers</Link>
           </div>
           <div className="col-xs-4">
-            <Link to='ch' className="git-btn" onClick={this.CodingHouseSearch}>Coding House Profiles</Link>
+            <Link to='ch' className="git-btn" onClick={this.CodingHouseSearch} >Coding House Profiles</Link>
           </div>
 
         </div>

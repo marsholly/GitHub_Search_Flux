@@ -21,8 +21,7 @@ class GitHubStore extends EventEmitter {
           this.emit('CHANGE');
           break;
         case 'RECEIVE_CH':
-          let {chs} = action.payload;
-          _ch.push(chs);
+          _ch = action.payload.chs;
           this.emit('CHANGE');
           break;
       }

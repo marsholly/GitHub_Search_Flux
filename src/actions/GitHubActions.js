@@ -7,8 +7,8 @@ const GitHubActions = {
   searchByUser(langlib) {
     API.searchByUser(langlib)
   },
-  searchCH(nameArr) {
-    API.searchCH(nameArr)
+  searchCH(nameObj) {
+    API.searchCH(nameObj)
   }
 }
 

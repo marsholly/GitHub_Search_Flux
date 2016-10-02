@@ -1,6 +1,7 @@
 import ServerActions from './actions/ServerActions';
 import {get} from 'axios';
 
+let chs = [];
 const API = {
   searchByLanguage(languages) {
       get(`https://api.github.com/search/repositories?q=${languages}+language:js&sort=stars&order=desc`)
@@ -20,15 +21,20 @@ const API = {
       })
       .catch(console.error);
   },
-  searchCH(nameArr) {
-    nameArr.forEach(name => {
-      get(`https://api.github.com/users/${name}`)
-       .then (res => {
-         let chs = res.data
-         ServerActions.receiveCH(chs);
-       })
-       .catch(console.error);
-    })
+  searchCH(nameObj) {
+    let { len, nameArr } = nameObj;
+    if(chs.length < len){
+      nameArr.forEach(name => {
+        get(`https://api.github.com/users/${name}`)
+         .then (res => {
+           let {data} = res;
+           chs.push(data);
+           ServerActions.receiveCH(chs);
+         })
+         .catch(console.error);
+      })
+    }
+
   }
 }
 
