@@ -29,26 +29,26 @@ export default class CHBoard extends Component {
     if ( chs ) {
       chsList = chs.map(ch => {
         let {name, avatar_url, id, html_url, repos_url, hireable} = ch;
-        if(hireable == null) hireable ='Should update hirable.';
-        if(name == null) name ='Should update Name.';
+        /*if(hireable == null) hireable ='UPDATE HIREABLE';*/
+        if(name == null) name ='UPDATE NAME';
         return (
-          <div className='repoItem' key={id}>
-            <img src={avatar_url} className="repoImg" />
-            <p className="repoTxt">{name}</p>
-            <a className="repoTxt" href={html_url}>Pofile</a>
-            <a className="repoTxt" href={repos_url}>See {name}'s Repos</a>
-            <p className="repoTxt">{hireable}</p>
+        <div className="col-xs-4">
+          <div className='gitItem ' key={id}>
+            <img src={avatar_url} className="gitImg" />
+            <p className="gitName">{name}</p>
+            <a className="gitProfile" href={html_url}>Visit Profile</a>
+            <a className="gitRepo" href={html_url + '?tab=repositories'}>Steal My Code</a>
+            {!hireable ? <p className="gitHire">Not Hireable!</p> : <p className="gitHireNotNeeded">{hireable}</p>}
           </div>
+        </div>
         )
       })
     }else{
       return chsList = <div></div>
     }
     return (
-      <div className="row">
-        <div className="repoContainer">
+      <div className="row chBoard">
           {chsList}
-        </div>
       </div>
     )
   }

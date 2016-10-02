@@ -28,27 +28,29 @@ export default class TopRepoBoard extends Component {
     let repoList;
     if ( topRepos ) {
       repoList = topRepos.map(topRepo => {
-        let {clone_url, owner, name, id, html_url, stargazers_count, description } = topRepo;
+        let {clone_url, owner, name, id, html_url, stargazers_count} = topRepo;
         let {avatar_url} = owner;
         return (
-          <div className='repoItem' key={id}>
-            <img src={avatar_url} className="repoImg" />
-            <p className="repoTxt">{name}</p>
-            <p className="repoTxt">{description}</p>
-            <a className="repoTxt" href={html_url}>Html Link</a>
-            <a className="repoTxt" href={clone_url}>Clone Link</a>
-            <p className="repoTxt">{stargazers_count}</p>
+         <div className="col-md-3">
+          <div className='gitRepItem' key={id}>
+            <img src={avatar_url} className="gitRepImg" />
+            <p className="gitRepName">{name}</p>
+            <a className="gitRepProfile" href={html_url}>Html Link</a>
+            <a className="gitRepClone" href={clone_url}>Clone Me</a>
+            <p className="gitRepGazers">{stargazers_count}<br /><span className='smallStar'>stars</span></p>
           </div>
+        </div> 
         )
       })
     }else{
       return repoList = <div></div>
     }
     return (
-      <div className="row">
-        <div className="repoContainer">
+      <div className="row topRepoBoard">
+        <h1>The Most Watched Repos on Git Hub Related to Your Search</h1>
+        <h4 className='bottomText'>Go clone yourself a good time!</h4>
           {repoList}
-        </div>
+        }
       </div>
     )
   }

@@ -30,22 +30,24 @@ export default class TopUserBoard extends Component {
       usersList = topUsers.map(topUser => {
         let {login, avatar_url, id, html_url, repos_url } = topUser;
         return (
-          <div className='repoItem' key={id}>
-            <img src={avatar_url} className="repoImg" />
-            <p className="repoTxt">{login}</p>
-            <a className="repoTxt" href={html_url}>Pofile</a>
-            <a className="repoTxt" href={repos_url}>See Repos</a>
+        <div className="col-md-3">
+          <div className='gitRepItem' key={id}>
+            <img src={avatar_url} className="gitRepImg" />
+            <p className="gitRepName">{login}</p>
+            <a className="gitRepClone" href={html_url}>Profile</a>
+            <a className="gitRepClone" href={html_url + '?tab=repositories'}>See Repos</a>
           </div>
+        </div>
         )
       })
     }else{
       return usersList = <div></div>
     }
     return (
-      <div className="row">
-        <div className="repoContainer">
+      <div className="row topRepoBoard">
+        <h1>The Most Followed Developers on Git Hub Related to Your Search</h1>
+        <h4 className='bottomText'>Go watch the best of the best...and Miguel</h4>
           {usersList}
-        </div>
       </div>
     )
   }

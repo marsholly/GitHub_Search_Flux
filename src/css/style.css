@@ -1,8 +1,225 @@
-.beersContainer {
-  margin-top: 100px;
+
+.gitContainer {
+  margin: 0 auto;
 }
 
-.randomImg {
-  width: 200px;
-  height: 300px;
+
+.chBoard, .topRepoBoard{
+  margin-top: 35px;
 }
+
+a {
+  text-decoration: none !important;
+  color: white;
+}
+
+a:hover, 
+a:visited, 
+a:hover, 
+a:active {
+  text-decoration: none !important;
+  color: white;
+  text-decoration: none;
+}
+
+.gitItem {
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background-color: #2c3e50;
+  color: white;
+  margin-top: 40px;
+  width: 300px;
+  height: 125px;
+}
+
+.gitImg{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 125px;
+  filter: grayscale(100%);
+}
+.gitName{
+  position: absolute;
+  top: 15px;
+  left: 150px;
+  text-transform: uppercase;
+}
+.gitProfile{
+  position: absolute;
+  padding: 5px;
+  background-color: orange;
+  width: 125px;
+  top: 40px;
+  left: 150px;
+  text-transform: uppercase;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+}
+
+.gitRepo{
+  position: absolute;
+  padding: 5px;
+  width: 125px;
+  background-color: #c0392b;
+  top: 75px;
+  left: 150px;
+  text-transform: uppercase;
+}
+
+.gitProfile:hover{
+  background-color: #f39c12;
+}
+
+.gitRepo:hover{
+  background-color: #e74c3c;
+}
+
+.gitHire{
+  position: absolute;
+  background-color: rgba(231, 76, 60, 0.62);
+  color: white;
+  bottom: -10px;
+  left: 0px;
+  font-size: 14px;
+  padding-top: 58px;
+  width: 125px;
+  height: 125px;
+  animation: blinker 2s linear infinite;
+  text-transform: uppercase;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+.gitRepItem {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+  height: 400px;
+}
+
+.gitRepImg {
+  width: 200px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+}
+
+.bottomText{
+  margin-bottom: 35px;
+}
+.gitRepName {
+  position: absolute;
+  padding: 5px;
+  width: 200px;
+  height: 70px;
+  top: 210px;
+
+  text-transform: uppercase;
+}
+.gitRepDesc {
+  position: absolute;
+  padding: 5px;
+  width: 200px;
+  background-color: #c0392b;
+  top: 260px;
+  left: 50px;
+}
+
+.gitRepClone {
+  position: absolute;
+  padding: 15px;
+  width: 200px;
+  background-color: #34495e;
+  top: 240px;
+  left: -1px;
+  margin-top:20px;
+}
+
+.gitRepGazers {
+  position: absolute;
+  padding: 12px 5px 12px 5px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #2c3e50;
+  top: -30px;
+  left: -30px;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+}
+.gitRepGazers:hover{
+  background-color: #34495e;
+}
+
+.smallStar{
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.form-control {
+  /*max-width: 800px;*/
+  padding: 60px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 0;
+  border: none;
+  background-color: #2c3e50;
+  color: #fff !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: 0 auto 20px auto;
+}
+
+.git-btn {
+  display: block;
+  border-radius: 0;
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 15px 15px 15px 15px;
+  /*margin: 25px;*/
+  text-decoration: none;
+}
+
+.git-btn:active, .git-btn:hover {
+  background-color: #34495e;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: white !important;
+  transition: opacity 250ms ease-in-out;
+}
+:focus::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white !important;
+  transition: opacity 250ms ease-in-out;
+}
+:focus:-ms-input-placeholder {
+  opacity: 0.5;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white !important;
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+}
+:focus::-moz-placeholder {
+  opacity: 0.5;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: white !important;
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+}
+:focus:-moz-placeholder {
+  opacity: 0.5;
+}
+
+.searchBlock {
+  margin-top: 20px;
+}
+
+
+
+

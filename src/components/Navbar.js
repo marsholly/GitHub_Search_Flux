@@ -12,7 +12,7 @@ export default class Navbar extends Component {
   }
 
   searchByLanguage() {
-    let languages = this.refs.language.value;
+    let languages = this.refs.langlib.value;
     GitHubActions.searchByLanguage(languages);
   }
 
@@ -26,25 +26,29 @@ export default class Navbar extends Component {
     GitHubActions.searchCH(nameArr);
   }
 
+  // delete to here
+
   render() {
     return (
-      <div className="container">
-        <nav className="navbar navbar-default navbar-fixed-top">
-          <div className="navbar-form navbar-left" role="search">
-            <div className="form-group">
-              <input type="text" className="form-control" placeholder="language" ref='language' />
-            </div>
-            <Link to='topRepo' className="btn btn-primary" onClick={this.searchByLanguage}>Search Language</Link>
-            <div className="form-group">
-              <input type="text" className="form-control" placeholder="language or library" ref='langlib'/>
-            </div>
-            <Link to='topUser' className="btn btn-default" onClick={this.searchByUser}>Search User</Link>
-            <Link to='ch' className="btn btn-default" onClick={this.CodingHouseSearch}>CHSearch</Link>
+      <div className="container text-center">
+        <h1>An app that helps you find the best repos and developers on:</h1>
+        <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" width='200px'/>
+        <div className="inputsContainer text-center">
+         <div className="row searchBlock text-center">
+          <input type="text" className="form-control gitInputForm" placeholder="Enter a language or library to Get Started" ref='langlib'/>
+         </div>
+          <div className="col-xs-4">
+            <Link to='topRepo' className="git-btn" onClick={this.searchByLanguage}>Find Top Repos</Link>
           </div>
-        </nav>
-        <div className="beersContainer">
-          {this.props.children}
+          <div className="col-xs-4">
+            <Link to='topUser' className="git-btn" onClick={this.searchByUser}>Find Top Developers</Link>
+          </div>
+          <div className="col-xs-4">
+            <Link to='ch' className="git-btn" onClick={this.CodingHouseSearch}>Coding House Profiles</Link>
+          </div>
+
         </div>
+        {this.props.children}
       </div>
     )
   }
